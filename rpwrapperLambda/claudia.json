@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "rpwrapperlambda-executor",
+    "name": "rpwrapperlambda",
+    "region": "eu-west-1"
+  }
+}

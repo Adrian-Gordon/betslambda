@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "getcarddata-executor",
+    "name": "getcarddata",
+    "region": "eu-west-1"
+  }
+}

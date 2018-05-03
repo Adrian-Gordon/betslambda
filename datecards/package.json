@@ -1,0 +1,22 @@
+{
+  "name": "datecards",
+  "version": "1.0.0",
+  "description": "Get the cards for today's date",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.226.1",
+    "cheerio": "^1.0.0-rc.2",
+    "moment": "^2.22.1",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "should": "^13.2.1"
+  }
+}

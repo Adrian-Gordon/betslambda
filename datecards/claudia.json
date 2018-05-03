@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "datecards-executor",
+    "name": "datecards",
+    "region": "eu-west-1"
+  }
+}
