@@ -20,8 +20,23 @@ exports.handler = (event, context, callback) => {
 
   invocation.then(data => {
     const card = JSON.parse(data.Payload)
+
+    const docClient = new AWS.DynamoDB.DocumentClient()
     
-    callback(null,card)
+    const params={
+      TableName: 'cards',
+      Item: card
+    }
+
+    const docPut = docClient.put(params).promise()
+    docPut.then(data => {
+      callback(null,data)
+    })
+    .catch(error => {
+      callback(JSON.stringify(error))
+    })
+    
+    
       
   })
   .catch(error => {
