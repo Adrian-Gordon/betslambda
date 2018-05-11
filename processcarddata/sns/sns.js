@@ -5,7 +5,7 @@ AWS.config.region = 'eu-west-1'
 
 const publishMessage = (arn, message) =>{
 
-  console.log('publish ' + message)
+  
 
   const sns = new AWS.SNS()
 
@@ -14,7 +14,8 @@ const publishMessage = (arn, message) =>{
     TopicArn: arn
   }
 
-  console.log("params: " + params)
+ 
+
 
   return(sns.publish(params).promise())
 
