@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "processcarddata-executor",
+    "name": "processcarddata",
+    "region": "eu-west-1"
+  }
+}

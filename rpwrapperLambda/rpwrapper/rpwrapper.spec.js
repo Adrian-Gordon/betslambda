@@ -37,11 +37,12 @@ describe('Rpwrapper Module', () => {
       })
       it('can get data for a valid card', () => {
 
-          const cardUrl = todaysCards[0]
+         // const cardUrl = todaysCards[0]
+         const cardUrl = "/racecards/308/churchill-downs/2018-05-04/701212"
           const cardPromise = rpwrapper.getCardData(rproot,cardUrl)
          ///console.log(cardUrl)
           return cardPromise.then((result) => {
-            //console.log(JSON.stringify(result))
+            console.log(JSON.stringify(result))
             expect(result).to.exist
             expect(result.url).to.equal("https://www.racingpost.com" + cardUrl)
 

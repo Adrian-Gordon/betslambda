@@ -280,7 +280,7 @@ const  parseCardDataFromRaceUrl = (raceurl,body) => {
     object.meeting=fullPlaceText.replace(/(\r\n|\n|\r)/gm,"").trim().toUpperCase();
   }catch(err){
       object.status='ERROR';
-      object.meeting="parse error: " + err.message + " when parsing " + fullPlaceText + " in race " + raceurl;
+      object.statusmessage="parse error: " + err.message + " when parsing " + fullPlaceText + " in race " + raceurl;
       console.log("parse error: " + err.message + " when parsing " + fullPlaceText + " in race " + raceurl);
 
   }
@@ -303,7 +303,7 @@ const  parseCardDataFromRaceUrl = (raceurl,body) => {
     object.distance=distObj;
   }catch(err){
     object.status='ERROR';
-    object.distance="parse error: " + err.message + " when parsing " + distanceRound + " in race " + raceurl;
+    object.statusmessage="parse error: " + err.message + " when parsing " + distanceRound + " in race " + raceurl;
     console.log("parse error: " + err.message + " when parsing " + distanceRound + " in race " + raceurl);
 
   }
@@ -351,7 +351,7 @@ const  parseCardDataFromRaceUrl = (raceurl,body) => {
   try{
    object.conditions=cardConditionsParser.parse(conditionsText);
   }catch(err){
-      object.conditions="parse error: " + err.message + " when parsing " + conditionsText + " in race " + raceurl;
+      object.statusmessage="parse error: " + err.message + " when parsing " + conditionsText + " in race " + raceurl;
       object.status='ERROR';
      console.log("parse error: " + err.message + " when parsing " + conditionsText + " in race " + raceurl);
 
@@ -372,7 +372,7 @@ const  parseCardDataFromRaceUrl = (raceurl,body) => {
 
       }catch(err){
         object.status='ERROR';
-        object.going="parse error: " + err.message + " when parsing " + goingText + " in race " + raceurl;
+        object.statusmessage="parse error: " + err.message + " when parsing " + goingText + " in race " + raceurl;
         console.log("parse error: " + err.message + " when parsing " + goingText + " in race " + raceurl);
       }
     }
@@ -817,6 +817,7 @@ const cardDistParserStr="start=de:distExpr ' Inner' {return de}\n"
 +"/furlongs:integer 'f' yards:integer 'y'  {return{furlongs:furlongs,yards:yards}}\n"
 +"/miles:integer 'm' furlongs:integer 'f' yards:integer 'y'  {return{miles:miles,furlongs:furlongs,yards:yards}}\n"
 +"/miles:integer 'm' furlongs:integer '\xBD' 'f'  {return{miles:miles,furlongs:(furlongs + 0.5)}}\n"
++"/miles:integer 'm' '\xBD' 'f'  {return{miles:miles,furlongs: 0.5}}\n"
 +"/miles:integer 'm' furlongs:integer 'f'  {return{miles:miles,furlongs:furlongs}}\n"
 +"/furlongs:integer '\xBD' 'f'  {return{furlongs:f(urlongs + 0.5)}}\n"
 +"/furlongs:integer 'f'  {return{furlongs:furlongs}}\n"
