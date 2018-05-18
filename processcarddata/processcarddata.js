@@ -44,6 +44,7 @@ exports.handler = (event, context, callback) => {
     })
     
     Promise.all(promises).then(results =>{
+      console.log("Successfully sent " + promises.length + " messages to the results SNS topic")
       callback(null, `Successfully sent ${promises.length} messages to the results SNS topic`);
     })
     .catch(error =>{

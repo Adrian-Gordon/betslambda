@@ -93,12 +93,14 @@ describe('Rpwrapper Module', () => {
     it('can download a result from a result url', () => {
 
       const raceResultPromise = rpwrapper.getRaceResult(rproot + "/results/87/wetherby/2017-02-21/668040")
+      //const raceResultPromise = rpwrapper.getRaceResult(rproot + "/results/1325/windsor-gb/2013-08-25/664315")
 
       return raceResultPromise.then ( result => {
         //console.log(result)
         expect(result).to.exist
       })
       .catch((error) => {
+        //console.log(error)
         expect(error).to.not.exist
       })
     })

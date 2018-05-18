@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:eu-west-1:754432677385:results:8b6fe95d-e20f-4b5e-af4a-0c022d11d2f1",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "3bdce193-2bb7-57cc-a990-b2fc883b6225",
+        "TopicArn": "arn:aws:sns:eu-west-1:754432677385:results",
+        "Subject": null,
+        "Message": "{\"horseid\":\"862957\",\"raceid\":\"696731\",\"resulturl\":\"/results/28/kempton/2018-04-09/696731\"}",
+        "Timestamp": "2018-05-11T13:57:32.394Z",
+        "SignatureVersion": "1",
+        "Signature": "JyTwJt6flRxcTQb3szAq/nogw4NE6Yzvo5egjNYiXUpd5/OVAWZdvYzi3UMCysYWTjPalDHXFaKpbWMysuoI6EEjTujQY61/l1Z5twLxixMYo/hQZLo6sOiBChPKjzChuaOWYQRnzzaUJOBu/2zZ4/cpbvYx2El9mBZFUR20D0UPf0815PAU9K67e0sRoIlUhgwktLFv3gyzAz45em1v4WmQAfSUFcQql8qRk2Sb0BuuHd+1zoD8lhCTGQJLwzQRe2xvntL21YOhsrLKapMmsJDPZ+ErOEVKN6KyYIYY+hQ3WHmGHQTOXukZJzKm48avIY+NAZG48WMKt3DZ+VWuMQ==",
+        "SigningCertUrl": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-eaea6120e66ea12e88dcd8bcbddca752.pem",
+        "UnsubscribeUrl": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:754432677385:results:8b6fe95d-e20f-4b5e-af4a-0c022d11d2f1",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}

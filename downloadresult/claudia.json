@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "downloadresult-executor",
+    "name": "downloadresult",
+    "region": "eu-west-1"
+  }
+}

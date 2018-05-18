@@ -25,5 +25,14 @@ exports.handler =  (event, context, callback) => {
           callback(JSON.stringify(error))
       })
     }
+  else if(event.functionname == 'getRaceResult'){
+    rpWrapper.getRaceResult(process.env.RPROOT_URL + event.resultUrl)
+    .then(result => {
+      callback(null, result)
+    })
+    .catch(error =>{
+          callback(JSON.stringify(error))
+      })
+  }
  
 }

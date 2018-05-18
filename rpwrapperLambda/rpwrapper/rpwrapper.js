@@ -185,7 +185,7 @@ const getHorseRaces = hurl => {
 
 const getRaceResult = rurl => {
 
-  
+  console.log("getRaceResult rurl: " + rurl)
   return new Promise((resolve, reject) => {
      
       const request = require('request')
@@ -206,12 +206,14 @@ const getRaceResult = rurl => {
           status: 'ERROR',
           message: error
         }
+        
         reject(obj)
       } else if (typeof resp === 'undefined') {
         const obj = {
           status: 'ERROR',
           message: 'No response from: ' + url
         }
+       
         reject(obj)
       } else if (resp.statusCode !== 200) {
         var obj = {
@@ -219,6 +221,7 @@ const getRaceResult = rurl => {
           message: JSON.stringify('bad response code: ' + resp.statusCode + ' from: ' + url)
         }
         //console.log('bad response code: ' + resp.statusCode + ' from: ' + url)
+        
         reject(obj)
       } else {
         
@@ -226,9 +229,11 @@ const getRaceResult = rurl => {
         try{
           //console.log(body)
           const resultData = parseResultPageBeta(rurl,body)
+          
           resolve(resultData)
-          resolve({})
+        
         }catch(error){
+          
           reject(error)
         }
       }
